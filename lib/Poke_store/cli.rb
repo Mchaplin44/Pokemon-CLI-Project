@@ -1,12 +1,14 @@
-qclearclass Cli
+class Cli
+
     def run 
         puts "  "
         puts " Hello and welcome to my Pokedex"
         puts "  "
+        Api.get_pokemon
         puts "Enter name of Pokemon to see your Pokemon Profile"   
         puts "  "
-       @pokemon = gets.strip.downcase
-       Api.get_pokemon
+      @pokemon = gets.strip.downcase
+
        Api.get_pokeinfo(@pokemon)
 
     end
